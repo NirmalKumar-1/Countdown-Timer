@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+.logo {
+    width: 130px;
+    padding: 0px 0;
+    cursor: pointer;
+    margin-top: -30px;
+}
+.content {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.content h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+.content h1 span {
+    color: #ff3753;
+}
+.content button {
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.content button img {
+    width: 15px;
+    margin-left: 10px;
+}
+.launch-time {
+    display: flex;
+}
+.launch-time div {
+    flex-basis: 100px;
+}
+.launch-time div p {
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+.rocket {
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+}
+@keyframes rocket {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    100% {
+        bottom: 105%;
+        opacity: 1;
+    }
+}
+.timer-date {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.timer-date h1 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+.timer-date input {
+    width: 200px;
+    height: 30px;
+    border: 1px solid white;
+    padding: 10px; 
+    color: black;
+    background: linear-gradient(#5227b692, #520a8da3);
+    margin-top: 10px;
+}
+.timer-date input::placeholder {
+    color: white;
+}
+#startBtn {
+    background-color: rgb(202, 2, 192);
+    cursor: pointer;
+}
+#startBtn::placeholder {
+    font-weight: bold;
+    padding-left: 47px;
+}
+.hide {
+    display: none;
+}
+.timer-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #c8c4c2, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.maintain {
+    background: linear-gradient(90deg, #c8c4c2, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.invalid {
+    color: rgba(186, 47, 47, 0.849);
+    text-transform: uppercase;
+    background-color: rgba(208, 186, 212, 0.453);
+    padding: 0 20px;
+    border-radius: 2px;
+}
+.timer-error {
+    position: absolute;
+    top: 40%;
+}
+.launch-time {
+    background: linear-gradient(90deg, #c8c4c2, #eec409);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.launch-time span {
+    margin-left: 5px;
+}
+
+/* media queries */
+@media (max-width: 837px){
+    .timer-heading {
+        font-size: 30px !important;
+    }
+    .content h1 {
+        font-size: 52px;
+    }
+    .rocket {
+        scale: 0.8;
+    }
+}
+@media (max-width: 690px){
+    .timer-heading {
+        font-size: 25px !important;
+    }
+    .content h1 {
+        font-size: 40px;
+    }
+    .launch-time p {
+        font-size: 40px !important;
+        margin: 0;
+        padding: 0;
+    }
+    .launch-time span {
+        margin-left: 2px;
+    }
+    .rocket {
+        scale: 0.7;
+    }
+}
+@media (max-width: 530px){
+    .timer-heading {
+        font-size: 20px !important;
+    }
+    .content h1 {
+        font-size: 33px;
+    }
+    .launch-time p {
+        font-size: 30px !important;
+    }
+    .launch-time span {
+        font-size: 10px !important;
+    }
+    .afterLive {
+        display: block;
+    }
+    .thankYou {
+        letter-spacing: 1px;
+    }
+    .rocket {
+        scale: 0.5;
+    }
+}
+@media (max-width: 450px){
+    .timer-heading {
+        font-size: 15px !important;
+    }
+    .content h1 {
+        font-size: 28px;
+    }
+    .invalid {
+        font-size: 19px;
+    }
+}
+@media (max-width: 350px){
+    .timer-heading {
+        font-size: 12px !important;
+    }
+    .content h1 {
+        font-size: 23px;
+    }
+    .invalid {
+        font-size: 15px;
+    }
+}

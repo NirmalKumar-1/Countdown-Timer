@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+
+    <!-- google font -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">     
+
+    <!-- stylesheet -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <span id="timer-start">
+            <img src="images/logo.png" class="logo">
+
+            <!-- input data & time -->
+            <div class="timer-date">
+                <h1 class="timer-heading">Enter your timer date & time</h1>
+                <input type="date"  name="date" id="date">
+                <input type="time" id="time" name="time">
+                <input type="text" placeholder="Start Timer" id="startBtn" onclick="startTimer()">
+            </div>
+
+            <!-- error message -->
+            <div class="timer-error hide">
+                <h2 class='invalid'>Enter a valid date & time</h2>
+            </div>
+
+            <!-- countdown -->
+            <div class="content hide">
+                <p class="maintain">Website Is Under Maintenance</p>
+                <h1>We're <span>Launching</span> Soon</h1>
+                <div class="launch-time">
+                    <div>
+                        <p id="days">00</p>
+                        <span>Days</span>
+                    </div>
+                    <div>
+                        <p id="hours">00</p>
+                        <span>Hours</span>
+                    </div>
+                    <div>
+                        <p id="minutes">00</p>
+                        <span>Minutes</span>
+                    </div>
+                    <div>
+                        <p id="seconds">00</p>
+                        <span>Seconds</span>
+                    </div>
+                </div>
+                <button type="button">Learn More <img src="images/triangle.png" ></button>
+            </div>
+            <img src="images/rocket.png" class="rocket hide">
+        </span>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
